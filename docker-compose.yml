@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  bot:
+    image: node:13
+    container_name: discord-bell-bot
+    hostname: discord-bell-bot
+    volumes:
+      - ./app:/discord
+    environment:
+      - TZ=Asia/Tokyo
+      - TOKEN_ID=<YOUR DISCORD BOT TOKEN>
+      - MUSIC_FILE=./assets/bell.mp3
+      - INTERVAL_TIME=2000
+    working_dir: /discord
+    command: ["npm", "start"]

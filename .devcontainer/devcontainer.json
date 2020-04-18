@@ -1,0 +1,12 @@
+{
+    "name": "Discord bell bot",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "bot",
+    "extensions": [
+        "dbaeumer.vscode-eslint"
+    ],
+    "workspaceFolder": "/discord",
+    "postCreateCommand": "yarn install"
+}
