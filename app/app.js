@@ -43,7 +43,7 @@ async function ring(channel) {
             console.log(`Join in ${channel.name}!`);
             // ring the bell
             conn.play(MUSIC_FILE, {
-                volume: 1.0,
+                volume: 0.8,
                 fec: true
             }).on('finish', () => {
                 console.log('Finished playing!');
