@@ -29,9 +29,12 @@ client.on('ready', async () => {
             }
             // logout
             client.destroy();
+            process.exit();
         })();
     } else {
         console.log('No voice channel is active.');
+        client.destroy();
+        process.exit();
     }
     console.log(`Logged in as ${client.user.tag}!`);
 });
