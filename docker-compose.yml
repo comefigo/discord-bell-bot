@@ -12,4 +12,5 @@ services:
       - MUSIC_FILE=./assets/bell.mp3
       - INTERVAL_TIME=2000
     working_dir: /discord
+    restart: unless-stopped
     command: ["bash", "-c", "yarn && yarn start"]
